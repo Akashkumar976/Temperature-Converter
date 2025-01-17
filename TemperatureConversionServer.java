@@ -40,6 +40,8 @@ System.exit(-1);
                      break;
                      outputLine=convertToFarenheit(inputLine);
                      out.println(outputLine);
+                     outputLine=convertToKelvin(inputLine);
+                     out.println(outputLine);
                 }
                 out.close();
                 in.close();
@@ -50,6 +52,12 @@ System.exit(-1);
                 e.printStackTrace();
             }
         }
+    }
+    private String convertToKelvin(String data)
+    {
+        double ctemp=Double.valueOf(data).intValue();
+        double ftemp=(ctemp+ 273.15 );
+        return String.valueOf(ftemp);
     }
     private String convertToFarenheit(String data)
     {
